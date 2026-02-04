@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A2 - Tirsten's Personal Website</title>
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/fonts.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="nav-left">
+        <span class="nav-location">
+          <span>VANCOUVER, BC</span>
+          <time id="clock" class="clock" role="timer"></time>
+          <span>PACIFIC STANDARD TIME</span>
+        </span>
+      </div>
+
+      <!-- Hamburger toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-right" role="navigation" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="../pages/visualizations.html">Visualizations</a></li>
+          <li>
+            <a class="nav-link" href="../assets/tirstenlisondra_resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="landing-content">
+    <section class="visualizations">
+      <div class="container">
+        <h1>Visualizations</h1>
+        <img class="viz-img" src="../imgs/waterVis1.svg" alt="Water visualization" />
+      </div>
+    </section>
+
+    <section class="svg-art">
+      <div class="container">
+        <h2>SVG Art</h2>
+
+        <!-- Responsive SVG wrapper -->
+        <div class="svg-wrapper">
+  <svg class="svg-responsive" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+    <g transform="translate(-120, 0)">
+      <rect x="150" y="100" width="80" height="300" fill="black" transform="skewX(20)"></rect>
+      <rect x="250" y="100" width="80" height="300" fill="black" transform="skewX(20)"></rect>
+      <rect x="350" y="100" width="80" height="300" fill="black" transform="skewX(20)"></rect>
+    </g>
+  </svg>
+</div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/main.js" defer></script>
+    <!-- CUSTOM MOUSE CURSOR -->
+    <div id="cursor-follower"></div>
+    <script src="../js/main.js" defer></script>
+
+</body>
+</html>

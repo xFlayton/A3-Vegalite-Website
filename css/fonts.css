@@ -1,0 +1,65 @@
+/*
+	Here we are declaring our fonts for use on this page, 
+	the declaration works as follows:
+
+	@font-face - tells the browser we are loading a new font
+	font-family - declares a name for this font
+	font-weight - sets a weight for this font (i.e. bold)
+	font-style - sets a style for this font (i.e. italic)
+	src - sets the different file types available for loading 
+		by different browers
+
+	Each browser tends to work with different filetypes for
+	the fonts, and as a result to ensure as broad-base support
+	as possible we load a broad base of fonts:
+
+	.woff2 = super modern browsers 
+	.woff = fairly modern browsers
+
+*/
+
+/* NEUE HAAS GROTESK TEXT PRO */
+/* Loading the '55 roman' weight */
+@font-face {
+    font-family: 'Neue-Haas-Grotesk-Text-Pro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/NHaasGroteskTXPro-55Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk-Text-Pro';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/NHaasGroteskTXPro-65Md.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk-Text-Pro';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/NHaasGroteskTXPro-75Bd.ttf') format('truetype');
+}
+
+/* Roboto */
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
