@@ -4,9 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A2 - Tirsten's Personal Website</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+
   <link rel="stylesheet" href="../css/normalize.css" />
   <link rel="stylesheet" href="../css/fonts.css" />
   <link rel="stylesheet" href="../css/style.css" />
+
+  <script>
+    const options ={
+      config: {
+      // Vega-lite default configuration
+    },
+    init: (view) => {
+      // initialize tooltip handler
+      view.tooltip(new vegaTooltip.Handler().call);
+    },
+    view: {
+      // view constructor options
+      renderer:"canvas",
+    },
+    }
+  </script>
+
 </head>
 
 <body>
@@ -46,11 +73,11 @@
       </div>
     </section>
 
-    <section class="svg-art">
+    <!-- <section class="svg-art">
       <div class="container">
-        <h2>SVG Art</h2>
+        <h2>SVG Art</h2> -->
 
-        <!-- Responsive SVG wrapper -->
+        <!-- Responsive SVG wrapper
         <div class="svg-wrapper">
   <svg class="svg-responsive" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
     <g transform="translate(-120, 0)">
@@ -60,16 +87,22 @@
     </g>
   </svg>
 </div>
+      </div>
+    </section> -->
 
-
+    <section class="gameVis">
+      <div class="container">
+        <div id="view"></div>
       </div>
     </section>
+
   </main>
 
+  <script>vl.register(vega, vegaLite, vegaEmbed, options);</script>
+  <script src="../js/vis.js"></script>
   <script src="../js/main.js" defer></script>
-    <!-- CUSTOM MOUSE CURSOR -->
     <div id="cursor-follower"></div>
-    <script src="../js/main.js" defer></script>
+   
 
 </body>
 </html>
